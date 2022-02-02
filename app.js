@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function ratoliDins(){
-  document.getElementById("score").style.color = "blue";
+  document.getElementById("result").style.color = "blue";
 }
 
 function ratoliFora(){
-  document.getElementById("score").style.color = "green";
+  document.getElementById("result").style.color = "green";
 } 
