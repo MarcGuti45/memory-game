@@ -4,3 +4,9 @@
   width: 400px;
   height: 300px;
 }
+
+#live {
+  position: relative;
+  bottom: 40px;
+  left: 340px;
+}

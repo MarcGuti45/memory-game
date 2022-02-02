@@ -71,15 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //check for matches
+
+  let contadorVides = 4;
+  let name = prompt('Quin es el teu nom?')
+  let cognom = prompt('Quin es el teu cognom?')
+
   function checkForMatch() {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
     
+    let lives = document.getElementById("lives")
+
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('You have clicked the same image!')
+      contadorVides--;
+      lives.innerHTML = contadorVides
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -92,12 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
+      contadorVides--;
+      lives.innerHTML = contadorVides
     }
+    if (contadorVides === 0) alert("Has perdut " + name + cognom)
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
+      resultDisplay.textContent = 'Congratulations! You found them all! ' + name + cognom
     }
   }
 
@@ -114,3 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createBoard()
 })
+
+// Canvi color score
+/*
+document.getElementsById("mouse").addEventListener("mouseover", ratoliDins);
+document.getElementsById("mouse").addEventListener("mouseout", ratoliFora);
+
+function ratoliDins(){
+  document.getElementById("score").style.color = "blue";
+}
+
+function ratoliFora(){
+  document.getElementById("score").style.color = "green";
+} */
