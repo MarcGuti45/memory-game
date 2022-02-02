@@ -86,9 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('You have clicked the same image!')
       contadorVides--;
       lives.innerHTML = contadorVides
+      alert('You have clicked the same image!')
+      
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -100,11 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
-      alert('Sorry, try again')
       contadorVides--;
       lives.innerHTML = contadorVides
+      alert('Sorry, try again')
+      
     }
-    if (contadorVides === 0) alert("Has perdut " + name + cognom)
+    if (contadorVides === 0){
+      alert("Has perdut " + name + cognom)
+    } 
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
