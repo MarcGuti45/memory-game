@@ -128,9 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // Canvi color score
-/*
-document.getElementsById("mouse").addEventListener("mouseover", ratoliDins);
-document.getElementsById("mouse").addEventListener("mouseout", ratoliFora);
+
 
 function ratoliDins(){
   document.getElementById("score").style.color = "blue";
@@ -138,4 +136,4 @@ function ratoliDins(){
 
 function ratoliFora(){
   document.getElementById("score").style.color = "green";
-} */
+} 
